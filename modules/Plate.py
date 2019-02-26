@@ -121,7 +121,8 @@ class Plate:
 			char_image = Image.fromarray(character[1]);
 			char = tes.image_to_string(char_image, config='-psm 10');
 			self.plate_number += char.upper();
-		plt.text(0,0,self.plate_number,fontsize=30); #remove this if error comes
+		#plt.text(0,0,self.plate_number,fontsize=30); #remove this if error comes
+		logger.info("%s are the plate characters ", str(len(self.plate_number)));
 		return True;
 
 
