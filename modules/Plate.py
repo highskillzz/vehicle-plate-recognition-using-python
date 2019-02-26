@@ -9,6 +9,7 @@ from copy import deepcopy, copy;
 from logging.config import fileConfig;
 from PIL import Image as PIL_Image;
 import matplotlib.pyplot as plt;
+import matplotlib.pyplot as plt
 import cv2
 
 # logger setup
@@ -120,6 +121,7 @@ class Plate:
 			char_image = Image.fromarray(character[1]);
 			char = tes.image_to_string(char_image, config='-psm 10');
 			self.plate_number += char.upper();
+		plt.text(0,0,self.plate_number,fontsize=30); #remove this if error comes
 		return True;
 
 
