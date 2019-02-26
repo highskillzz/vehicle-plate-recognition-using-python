@@ -110,6 +110,7 @@ class Plate:
 				character = self.cropCharacter([x,y,w,h]);
 				self.plate_characters.append([x, character]);
 				cv2.rectangle(self.plate_image_char, (x,y), (x+w, y+h), (0,0,255), 1);
+				logger.info(character);
 
 		logger.info("%s plate characters found", str(len(self.plate_characters)));
 		return True;
