@@ -10,6 +10,7 @@ logger = logging.getLogger();
 def run():
 
 	plates_array = loadImages("images/cars/");
+	plates_array = loadImages("cars/police.jpg")
 	characters_array = loadCharacters("images/characters/");
 	logger.info("All testing images and characters have been downloaded.");
 
