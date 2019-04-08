@@ -10,12 +10,13 @@ logger = logging.getLogger();
 def run():
 
 	plates_array = loadImages("images/cars/");
-	plates_array = loadImages("cars/police.jpg")
+	plates_array = loadImages("cars/")
 	characters_array = loadCharacters("images/characters/");
 	logger.info("All testing images and characters have been downloaded.");
 
 	for plate in plates_array:
-		plate.plateSearch(characters_array);
+		if(plate == 'police.jpg'):
+			plate.plateSearch(characters_array);
 
 	logger.info("Finished plate recognition.");
 	return True;
